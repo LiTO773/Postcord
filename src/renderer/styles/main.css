@@ -1,0 +1,9 @@
+body {
+  color: #fff;
+  background: #36393f;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+input {
+  width: 400px;
+}
