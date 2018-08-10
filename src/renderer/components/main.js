@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 
-import { newBot, changeCurrentBot, removeBot } from '../../actions/botActions'
+import { newBot, removeBot } from '../../actions/botActions'
 
 class Main extends Component {
   state = {
@@ -14,10 +14,6 @@ class Main extends Component {
 
   handleNewBot = () => {
     this.props.newBot(this.state.token)
-  }
-
-  handleBotChange = index => {
-    this.props.changeCurrentBot(index)
   }
 
   render() {
@@ -34,10 +30,8 @@ class Main extends Component {
         <ul>
           { this.props.bots.map((val, i) => (
             <li key={i}>
-              <button onClick={() => this.props.removeBot(i)}>X</button>
               <img src={val.avatar} style={{width: "30px", height: "30px", borderRadius: "100%"}} />
               {val.username}
-              <button onClick={() => this.handleBotChange(i)}>{i} - { i === this.props.currentBot ? 'SELECTED' : 'SELECT' }</button>
             </li>
           )) }
         </ul>
@@ -54,4 +48,4 @@ const mapStateToProps = state => (
   }
 )
 
-export default connect(mapStateToProps, { newBot, changeCurrentBot, removeBot })(Main)
+export default connect(mapStateToProps, { newBot, removeBot })(Main)
