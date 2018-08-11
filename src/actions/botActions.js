@@ -1,4 +1,5 @@
 import Discord from 'discord.js'
+import Bot from '../helpers/botFunction'
 import store from '../reducers/index'
 import { ADD_BOT, DISCORD_ERROR, REMOVE_BOT } from '../actions/types'
 
@@ -18,7 +19,7 @@ export const newBot = token => dispatch => {
         avatar: client.user.avatarURL,
         username: client.user.username,
         token,
-        session: client
+        session: Bot(client)
       }
     }})
   })

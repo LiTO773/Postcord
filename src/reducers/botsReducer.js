@@ -1,4 +1,4 @@
-import * as types from '../actions/types'
+import { ADD_BOT, DISCORD_ERROR, REMOVE_BOT } from '../actions/types'
 
 const INITIAL_STATE = {
   bots: [], // {username, avatar, token, session}
@@ -7,14 +7,14 @@ const INITIAL_STATE = {
 
 export default (state = INITIAL_STATE, action) => {
   switch (action.type) {
-    case types.ADD_BOT:
+    case ADD_BOT:
       return { ...state,
         bots: [...state.bots, action.payload.bot],
         status: [true]
       }
-    case types.DISCORD_ERROR:
+    case DISCORD_ERROR:
       return { ...state, status: [false, action.payload] }
-    case types.REMOVE_BOT:
+    case REMOVE_BOT:
       return { ...state, bots: action.payload }
     default:
       return state;
