@@ -31,6 +31,7 @@
     ]
   },
   "devDependencies": {
+    "electron-devtools-installer": "^2.2.4",
     "electron-prebuilt-compile": "^2.0.6"
   }
 }

@@ -1,11 +1,16 @@
 import React, { Component } from 'react'
+import { connect } from 'react-redux'
 
-export default class Content extends Component {
+class Content extends Component {
   render() {
     return (
       <div>
-        <h1>Stuff here!</h1>
+        <h1>{this.props.route}</h1>
       </div>
     )
   }
 }
+
+const mapStateToProps = state => ({ route: state.route.route })
+
+export default connect(mapStateToProps)(Content)

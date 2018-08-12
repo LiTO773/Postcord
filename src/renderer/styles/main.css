@@ -18,7 +18,7 @@ html, body {
 /* MAIN SIDEBAR */
 .main-sidebar {
   background: #202225;
-  width: 70px;
+  width: 88px;
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -30,9 +30,9 @@ html, body {
   margin-right: auto;
   margin-top: 5px;
   margin-bottom: 5px;
-  height: 25px;
-  width: 60px;
-  font-size: 14px;
+  height: 30px;
+  width: 70px;
+  font-size: 16px;
   border-radius: 6px;
   background: rgba(79,84,92,.6);
   cursor: pointer;
@@ -45,10 +45,35 @@ html, body {
 /* SECOND SIDEBAR */
 .second-sidebar {
   background: #2f3136;
-  width: 220px;
+  width: 240px;
   height: 100vh;
 }
 
 input {
   width: 400px;
+}
+
+/* MODAL */
+.backdrop {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  z-index: 3;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 4;
+  color: #000;
+  background: #fff;
+  height: 420px;
+  width: 520px;
+  padding: 10px 10px;
+  border-radius: 5px;
 }

@@ -4,7 +4,7 @@ import Category from './Category'
 export default () => {
   return (
     <div className="main-sidebar">
-      <Category title="bots" />
+      <Category name="Bots" />
     </div>
   )
 }

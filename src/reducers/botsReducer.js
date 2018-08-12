@@ -17,6 +17,6 @@ export default (state = INITIAL_STATE, action) => {
     case REMOVE_BOT:
       return { ...state, bots: action.payload }
     default:
-      return state;
+      return state
   }
 }
