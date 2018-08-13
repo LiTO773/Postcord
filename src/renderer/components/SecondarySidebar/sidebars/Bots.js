@@ -8,7 +8,7 @@ class Bots extends Component {
   render() {
     return (
       <Fragment>
-        { this.props.bots.map((bot, i) => <Item key={i} bot={bot} />) }
+        { this.props.bots.map((bot, i) => <Item key={i} id={i} bot={bot} />) }
         <li
           style={{cursor: "pointer", marginTop: "30px", fontSize: "20px"}}
           onClick={this.props.openModal}>

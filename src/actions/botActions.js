@@ -16,10 +16,9 @@ export const newBot = token => dispatch => {
   client.on('ready', () => {
     dispatch({ type: ADD_BOT, payload: {
       bot: {
-        avatar: client.user.avatarURL,
-        username: client.user.username,
         token,
-        session: Bot(client)
+        session: client,
+        sessionHandler: Bot(client)
       }
     }})
   })
