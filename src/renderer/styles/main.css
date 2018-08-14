@@ -127,7 +127,15 @@ input {
 
 .tab {
   display: inline-block;
-  line-height: 55px;
+  color:hsla(0,0%,100%,.6);
+  line-height: 53px;
   margin-left: 30px;
   margin-right: 30px;
+  cursor: pointer;
+}
+
+.active-tab {
+  border-bottom: 2px solid #fff;
+  color: #fff;
+  cursor: default;
 }
